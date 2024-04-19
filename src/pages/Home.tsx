@@ -44,7 +44,7 @@ export default function Home() {
 			<br />
 			<FormControl sx={{ width: '300px' }}>
 				<Input
-					placeholder="Call to action"
+					placeholder="Nombre Clave..."
 					value={name}
 					onChange={(e) => setName(e.target.value)}
 					sx={{ borderRadius: '9999px', height: '50px', paddingRight: 0 }}
