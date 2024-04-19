@@ -5,7 +5,7 @@ import { Outlet } from 'react-router-dom';
 
 // Joy
 import Box from '@mui/joy/Box';
-import Header from '../components/Header';
+// import Header from '../components/Header';
 
 // Sidebar Menu
 import Sidebar, { MainMenu, SupportMenu } from '../components/Sidebar/Sidebar';
@@ -39,7 +39,7 @@ export default function Root() {
 	return (
 		<React.Fragment>
 			<Box sx={{ display: 'flex', minHeight: '100dvh' }}>
-				<Header />
+				{/* <Header /> */}
 
 				<Sidebar>
 					<MainMenu>

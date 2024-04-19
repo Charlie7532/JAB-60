@@ -1,9 +1,8 @@
 /** @format */
 
-import React, { ReactNode } from 'react';
+import * as React from 'react';
 import GlobalStyles from '@mui/joy/GlobalStyles';
-import Avatar from '@mui/joy/Avatar';
-import { Box, Skeleton } from '@mui/joy';
+import { Box } from '@mui/joy';
 import Divider from '@mui/joy/Divider';
 import IconButton from '@mui/joy/IconButton';
 import Input from '@mui/joy/Input';
@@ -11,50 +10,12 @@ import Typography from '@mui/joy/Typography';
 import Sheet from '@mui/joy/Sheet';
 import { Link } from 'react-router-dom';
 import SearchRoundedIcon from '@mui/icons-material/SearchRounded';
-import LogoutRoundedIcon from '@mui/icons-material/LogoutRounded';
-import PersonIcon from '@mui/icons-material/Person';
-import SettingsIcon from '@mui/icons-material/Settings';
-import AccountBalanceWalletRoundedIcon from '@mui/icons-material/PaymentsRounded';
-import ColorSchemeToggle from '../ColorSchemeToggle';
+
 import { closeSidebar } from '../../utils/utils';
 import List from '@mui/joy/List';
 import { listItemButtonClasses } from '@mui/joy/ListItemButton';
-import Dropdown from '@mui/joy/Dropdown';
-import Menu from '@mui/joy/Menu';
-import MenuButton from '@mui/joy/MenuButton';
-import MenuItem from '@mui/joy/MenuItem';
-import MoreVert from '@mui/icons-material/MoreVert';
-import ListDivider from '@mui/joy/ListDivider';
 
-function IconButtonMenu() {
-
-	return (
-		<Dropdown>
-			<MenuButton slots={{ root: IconButton }} slotProps={{ root: { variant: 'plain', color: 'neutral' } }}>
-				<MoreVert />
-			</MenuButton>
-			<Menu sx={{ zIndex: 10100 }} placement="top-start">
-				<MenuItem component={Link} to={'/profile'}>
-					<PersonIcon />
-					Profile
-				</MenuItem>
-				<MenuItem component={Link} to={'/profile/Settings'}>
-					<SettingsIcon />
-					Settings
-				</MenuItem>
-				<MenuItem component={Link} to={'https://billing.stripe.com/p/login/00g7widMMbPOfo4fYY'}>
-					<AccountBalanceWalletRoundedIcon />
-					Manage billing
-				</MenuItem>
-				<ListDivider />
-
-			</Menu>
-		</Dropdown>
-	);
-}
-
-
-export function MainMenu({ children }: { children: ReactNode }) {
+export function MainMenu({ children }: { children: React.ReactNode }) {
 	return (
 		<List
 			size="sm"
@@ -68,7 +29,7 @@ export function MainMenu({ children }: { children: ReactNode }) {
 	);
 }
 
-export function SupportMenu({ children }: { children: ReactNode }) {
+export function SupportMenu({ children }: { children: React.ReactNode }) {
 	return (
 		<List
 			size="sm"
@@ -84,7 +45,7 @@ export function SupportMenu({ children }: { children: ReactNode }) {
 	);
 }
 
-export default function Sidebar({ children }: { children: ReactNode }) {
+export default function Sidebar({ children }: { children: React.ReactNode }) {
 	return (
 		<Sheet
 			className="Sidebar"
@@ -138,10 +99,8 @@ export default function Sidebar({ children }: { children: ReactNode }) {
 			/>
 
 			<Box sx={{ display: 'flex', gap: 1, alignItems: 'center' }}>
-				<IconButton variant="plain" size="sm" aria-label="Main 12 Home" component={Link} to="/">
-				</IconButton>
-				<Typography level="title-lg">MAIN 12</Typography>
-				<ColorSchemeToggle sx={{ ml: 'auto' }} aria-label="color theme toggle" />
+				<IconButton variant="plain" size="sm" aria-label="Main 12 Home" component={Link} to="/"></IconButton>
+				<Typography level="title-lg">TOP GUN</Typography>
 			</Box>
 			<Divider />
 			<Input id="search_bar" size="sm" startDecorator={<SearchRoundedIcon />} placeholder="Search" />
