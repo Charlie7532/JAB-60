@@ -47,7 +47,7 @@ export default function Home() {
 					placeholder="Call to action"
 					value={name}
 					onChange={(e) => setName(e.target.value)}
-					sx={{ borderRadius: '9999px', height: '50px'}}
+					sx={{ borderRadius: '9999px', height: '50px', paddingRight: 0 }}
 					endDecorator={
 						<IconButton type="submit" onClick={handleFormSubmit} aria-label="Open in new tab" variant="solid" color="primary" sx={{ width: '70px', height: '50px', borderRadius: '0 90px 90px 0' }}>
 							<SendIcon />
