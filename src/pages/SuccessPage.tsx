@@ -19,7 +19,7 @@ export default function SuccessPage() {
 				}}>
 				<br />
 				<div style={{ textAlign: 'center' }}>
-					<Typography level="h1">¡¡¡Operación Exitosa!!!</Typography>
+					<Typography level="h1">¡Operación Exitosa!</Typography>
 					<br />
 					<Typography level="title-lg">Hemos logrado desencriptar el código y encontramos la ubicación de Maverick.</Typography>
 					<br />
