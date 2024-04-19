@@ -7,7 +7,7 @@ import FormControl from '@mui/joy/FormControl';
 import Input from '@mui/joy/Input';
 import SendIcon from '@mui/icons-material/Send';
 import IconButton from '@mui/joy/IconButton';
-import {  useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 export default function Home() {
 	const navigate = useNavigate();
@@ -42,13 +42,14 @@ export default function Home() {
 			<Typography level="h1">Hola Agente</Typography>
 			<Typography level="title-lg">Ingresa con tu nombre clave</Typography>
 			<br />
-			<FormControl>
+			<FormControl sx={{ width: '300px' }}>
 				<Input
 					placeholder="Call to action"
 					value={name}
 					onChange={(e) => setName(e.target.value)}
+					sx={{ borderRadius: '9999px', height: '50px'}}
 					endDecorator={
-						<IconButton onClick={handleFormSubmit} aria-label="Open in new tab" variant="solid" color="primary">
+						<IconButton type="submit" onClick={handleFormSubmit} aria-label="Open in new tab" variant="solid" color="primary" sx={{ width: '70px', height: '50px', borderRadius: '0 90px 90px 0' }}>
 							<SendIcon />
 						</IconButton>
 					}
