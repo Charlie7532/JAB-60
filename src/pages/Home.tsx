@@ -38,23 +38,26 @@ export default function Home() {
 				justifyContent: 'center',
 				height: '80vh',
 			}}>
-			<br />
-			<Typography level="h1">Hola Agente</Typography>
-			<Typography level="title-lg">Ingresa con tu nombre clave</Typography>
-			<br />
-			<FormControl sx={{ width: '300px' }}>
-				<Input
-					placeholder="Nombre Clave..."
-					value={name}
-					onChange={(e) => setName(e.target.value)}
-					sx={{ borderRadius: '9999px', height: '50px', paddingRight: '0.55rem' }}
-					endDecorator={
-						<IconButton type="submit" onClick={handleFormSubmit} aria-label="Open in new tab" variant="solid" color="primary" sx={{ width: '70px', height: '50px', borderRadius: '0 90px 90px 0' }}>
-							<SendIcon />
-						</IconButton>
-					}
-				/>
-			</FormControl>
+			<div style={{ textAlign: 'center', padding: '25px' }}>
+				<br />
+				<Typography level="h1">Hola Agente</Typography>
+				<Typography level="title-lg">Ingresa tu nombre para iniciar el proceso de desencriptación</Typography>
+
+				<br />
+				<FormControl sx={{ width: '100%' }}>
+					<Input
+						placeholder="Nombre..."
+						value={name}
+						onChange={(e) => setName(e.target.value)}
+						sx={{ borderRadius: '9999px', height: '50px', paddingRight: '0.55rem' }}
+						endDecorator={
+							<IconButton type="submit" onClick={handleFormSubmit} aria-label="Open in new tab" variant="solid" color="primary" sx={{ width: '70px', height: '50px', borderRadius: '0 90px 90px 0' }}>
+								<SendIcon />
+							</IconButton>
+						}
+					/>
+				</FormControl>
+			</div>
 		</Box>
 	);
 }
