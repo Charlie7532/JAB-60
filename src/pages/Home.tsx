@@ -11,7 +11,7 @@ import {  useNavigate } from 'react-router-dom';
 
 export default function Home() {
 	const navigate = useNavigate();
-	const API_URL = 'https://script.google.com/macros/s/AKfycby9s08SjHMheOOY5WKJBry__o4S_OWNlyxdjBqAANRjaggrHlYvOcTg5Rj6zvV_m-Jp/exec';
+	const API_URL = 'https://script.google.com/macros/s/AKfycbwo4IoIjuzCeoagCc3mN-QHDYfTwv7brykZoBkJ71TX-k0VeMQRsDiEpk91XQM_DZk4/exec';
 	const [name, setName] = React.useState('');
 
 	function handleFormSubmit() {
