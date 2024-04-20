@@ -45,7 +45,7 @@ export default function Root() {
 					<MainMenu>
 						<ListItemComponent to="/" title="Home" icon={HomeRoundedIcon} notifications={notifications.home} />
 						{/* <ListItemComponent to="/Dashboard" title="Dashboard" icon={DashboardRoundedIcon} notifications={notifications.dashboard} /> */}
-						<ListItemComponent to="/assets" title="Assets" icon={StorageOutlinedIcon} notifications={notifications.dashboard} />
+						{/* <ListItemComponent to="/assets" title="Assets" icon={StorageOutlinedIcon} notifications={notifications.dashboard} /> */}
 					</MainMenu>
 					<SupportMenu>
 						<ListItemComponent to="https://main12.com/contact-us/" title="Support" icon={SupportRoundedIcon} />
