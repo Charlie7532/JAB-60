@@ -13,7 +13,7 @@ import ListItemComponent from '../components/Sidebar/ListItemComponent';
 
 // Icons
 import HomeRoundedIcon from '@mui/icons-material/HomeRounded';
-import StorageOutlinedIcon from '@mui/icons-material/StorageOutlined';
+// import StorageOutlinedIcon from '@mui/icons-material/StorageOutlined';
 import SupportRoundedIcon from '@mui/icons-material/SupportRounded';
 
 import ArrowOutwardRoundedIcon from '@mui/icons-material/ArrowOutwardRounded';
