@@ -13,7 +13,7 @@ export default function Console() {
     // Wait for 15 seconds before redirecting
     const timeoutId = setTimeout(() => {
       navigate('/success');
-    }, 1200); // Changed to 15000 milliseconds (15 seconds)
+    }, 2000); // Changed to 15000 milliseconds (15 seconds)
 
     // Clean up the timeout
     return () => clearTimeout(timeoutId);
