@@ -55,6 +55,7 @@ const commands = [
 	'npm install @mui/private-alert',
 	'npm install @mui/private-activity',
 	'npm install @mui/private-anchor',
+  
 ];
 
 export default function Console() {
