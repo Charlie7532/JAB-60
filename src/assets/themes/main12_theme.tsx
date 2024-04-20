@@ -10,8 +10,8 @@ const palette = {
 		solidHoverBorder: '#0a58ca',
 		solidActiveBg: '#015a86ff',
 		solidActiveBorder: '#0a53be',
-		solidDisabledBg: '#0d6efd',
-		solidDisabledBorder: '#0d6efd',
+		solidDisabledBg: '#015a86ff',
+		solidDisabledBorder: '#015a86ff',
 	},
 	//   neutral: {
 	//     solidBg: "#4e5357ff",
