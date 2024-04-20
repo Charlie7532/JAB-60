@@ -4,9 +4,9 @@ import CircularProgress from '@mui/joy/CircularProgress';
 import Typography from '@mui/joy/Typography';
 import Box from '@mui/joy/Box';
 import Table from '@mui/joy/Table';
+import Sheet from '@mui/joy/Sheet';
 
 import { useNavigate } from 'react-router-dom';
-import Sheet from '@mui/joy/Sheet';
 
 interface NameInfo {
 	id: string;
@@ -14,15 +14,14 @@ interface NameInfo {
 	timeStamp: string; // Or whatever type timeStamp should be
 }
 
-export default function Home() {
+const API_URL = 'https://script.google.com/macros/s/AKfycbwo4IoIjuzCeoagCc3mN-QHDYfTwv7brykZoBkJ71TX-k0VeMQRsDiEpk91XQM_DZk4/exec';
+
+function WatinAgents() {
 	const navigate = useNavigate();
 	const [namesInfo, setNamesInfo] = React.useState<{ totalNames: number; namesList: NameInfo[] }>({ totalNames: 0, namesList: [] });
 
 	const expectedUsers = 20;
 
-	const API_URL = 'https://script.google.com/macros/s/AKfycbwo4IoIjuzCeoagCc3mN-QHDYfTwv7brykZoBkJ71TX-k0VeMQRsDiEpk91XQM_DZk4/exec';
-
-	// Function to fetch data from the API and update state
 	const fetchData = () => {
 		fetch(API_URL)
 			.then((response) => response.json())
@@ -54,14 +53,7 @@ export default function Home() {
 	}, [namesInfo.totalNames, navigate]);
 
 	return (
-		<Box
-			sx={{
-				display: 'flex',
-				flexDirection: 'column',
-				alignItems: 'center',
-				justifyContent: 'center',
-				height: '80vh',
-			}}>
+		<React.Fragment>
 			<br />
 			<Typography level="h1">Agentes conectados</Typography>
 			<Typography level="h1">
@@ -92,6 +84,21 @@ export default function Home() {
 					</tbody>
 				</Table>
 			</Sheet>
+		</React.Fragment>
+	);
+}
+
+export default function Home() {
+	return (
+		<Box
+			sx={{
+				display: 'flex',
+				flexDirection: 'column',
+				alignItems: 'center',
+				justifyContent: 'center',
+				height: '80vh',
+			}}>
+			<WatinAgents />
 		</Box>
 	);
 }

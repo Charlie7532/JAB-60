@@ -10,6 +10,8 @@ import { useColorScheme } from '@mui/joy/styles';
 const Home = lazy(() => import('./pages/Home'));
 const WatingAgents = lazy(() => import('./pages/WatingAgents'));
 const ConsoleAnimation = lazy(() => import('./pages/ConsoleAnimation'));
+const ConsoleAnimation_2 = lazy(() => import('./pages/ConsoleAnimation_2'));
+
 const SuccessPage = lazy(() => import('./pages/SuccessPage'));
 const ErrorPage = lazy(() => import('./pages/error-page'));
 
@@ -53,7 +55,18 @@ function App() {
 					path: '/console-connected',
 					element: (
 						<Suspense fallback={<LoaderSpinner />}>
+							{/* <ConsoleAnimation /> */}
+              <ConsoleAnimation_2 />
+						</Suspense>
+					),
+					loader: PageLoader,
+				},
+        {
+					path: '/console-connected-2',
+					element: (
+						<Suspense fallback={<LoaderSpinner />}>
 							<ConsoleAnimation />
+              {/* <ConsoleAnimation_2 /> */}
 						</Suspense>
 					),
 					loader: PageLoader,

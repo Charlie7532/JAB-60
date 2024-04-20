@@ -2,22 +2,26 @@ import * as React from 'react';
 import { useNavigate } from 'react-router-dom';
 import MatrixText from '../components/MatrixAnimation';
 
-export default function Home() {
+const style = {
+  height: '100vh', // Set the height to fill the entire viewport
+};
+
+export default function Console() {
   const navigate = useNavigate();
 
   React.useEffect(() => {
     // Wait for 15 seconds before redirecting
     const timeoutId = setTimeout(() => {
       navigate('/success');
-    }, 10000);
+    }, 1500); // Changed to 15000 milliseconds (15 seconds)
 
     // Clean up the timeout
     return () => clearTimeout(timeoutId);
   }, [navigate]);
 
   return (
-    <React.Fragment>
+    <div style={style}>
       <MatrixText />
-    </React.Fragment>
+    </div>
   );
 }

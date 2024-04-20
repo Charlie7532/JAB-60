@@ -13,7 +13,15 @@ export default function ErrorPage() {
 
 	return (
 		<React.Fragment>
-			<Box textAlign="center">
+			<Box
+				textAlign="center"
+				sx={{
+					display: 'flex',
+					flexDirection: 'column',
+					alignItems: 'center',
+					justifyContent: 'center',
+					height: '80vh',
+				}}>
 				<Typography level="h1">Oops! Looks like you've lost your way</Typography>
 				<Typography level="body-md">Sorry, we encountered an error while processing your request.</Typography>
 				<Typography level="body-md">Please try again later or return to the home page.</Typography>
